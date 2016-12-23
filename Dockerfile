@@ -30,6 +30,7 @@ RUN adduser user
 ENV DISPLAY=:1
 ENV HOME=/home/user
 
+RUN mkdir -p /home/user/.i3
 RUN cp /etc/i3/config /home/user/.i3/config
 RUN sed -i "s;^exec.*;exec /usr/local/bin/inspire;" /home/user/.i3/config
 
